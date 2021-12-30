@@ -1,0 +1,121 @@
+/* Import des fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Général */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #333333;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p, .list-group-item {
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn {
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color:#463FCA;
+    border-color:#463FCA;
+}
+
+.btn-primary:hover {
+    background-color: #5852c7;
+    border-color:#5852c7;
+}
+
+.btn-outline-secondary {
+    border-color:#7CB4F4;
+    color: #7CB4F4;
+}
+
+.btn-outline-secondary:hover {
+    border-color:#7CB4F4;
+    background-color: #7CB4F4;
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 34px;
+    }
+    
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 15px;
+    }
+    
+    p, .list-group-item {
+        font-size: 12px;
+    }
+}
+/* Section Hero */
+
+/* Section Soft Skills */
+
+.icone_skill {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .icone_skill {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Section Compétences */
+
+.icone_langages {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .icone_langages {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* Section Savoir Faire */
+
+.list-group-item {
+    border: none;
+}
+
+/* Section A Propos */
+
+/* @media screen and (max-width: 900px) {
+    .icone_langages {
+        width: 64px;
+        height: 64px;
+    }
+} */
