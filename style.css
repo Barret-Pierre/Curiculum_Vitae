@@ -33,6 +33,7 @@ p, .list-group-item {
 
 .btn {
     font-size: 16px;
+    width: 200px;
 }
 
 .btn-primary {
@@ -55,6 +56,10 @@ p, .list-group-item {
     background-color: #7CB4F4;
 }
 
+.section_background-secondary {
+    background-color: #7CB4F4;
+}
+
 @media screen and (max-width: 900px) {
     h1 {
         font-size: 34px;
@@ -72,6 +77,10 @@ p, .list-group-item {
     p, .list-group-item {
         font-size: 12px;
     }
+
+    .btn {
+    width: 100%;
+}
 }
 /* Section Hero */
 
@@ -109,13 +118,20 @@ p, .list-group-item {
 
 .list-group-item {
     border: none;
+    background: none;
 }
 
 /* Section A Propos */
 
-/* @media screen and (max-width: 900px) {
-    .icone_langages {
-        width: 64px;
-        height: 64px;
+
+/* Section Contact */
+
+.contact_form-size {
+    width: 75%;
+}
+
+@media screen and (max-width: 900px) {
+    .contact_form-size {
+        width: 100%;
     }
-} */
+}
