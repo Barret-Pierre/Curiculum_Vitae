@@ -2,28 +2,61 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Variable */
+
+:root {
+    font-size: 16px;
+    --text-primary: white;
+    --text-secondary: #B4C5E4;
+    --bg-primary: #b4c5e4cc;
+    --bg-secondary: #B4C5E4;
+    --bg-tertiary: #B4C5E4;
+    --transition-speed: 600ms;
+}
+
+
 /* Général */
+
 * {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
     color: #333333;
 }
 
-h1 {
-    font-size: 48px;
+body::-webkit-scrollbar {
+    width: 0.25rem;
 }
 
-h2 {
-    font-size: 36px;
+body::-webkit-scrollbar-track {
+    background: #3C3744;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2,
+.lead {
+    font-size: 2.2rem;
     margin-bottom: 3rem;
-    text-transform: uppercase;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 
-p, .list-group-item {
+p,
+.list-group-item {
     font-size: 16px;
 }
 
@@ -37,69 +70,303 @@ p, .list-group-item {
 }
 
 .btn-primary {
-    background-color:#463FCA;
-    border-color:#463FCA;
+    background-color: #FBFFF1;
+    border-color: #FBFFF1;
+    color: #B4C5E4;
 }
 
 .btn-primary:hover {
-    background-color: #5852c7;
-    border-color:#5852c7;
+    background-color: #FBFFF1;
+    border-color: #FBFFF1;
+    color: #B4C5E4;
+}
+
+.btn-secondary:hover {
+    background-color: #B4C5E4;
+    border-color: #B4C5E4;
+}
+
+.btn-secondary {
+    background-color: #B4C5E4;
+    border-color: #B4C5E4;
 }
 
 .btn-outline-secondary {
-    border-color:#7CB4F4;
-    color: #7CB4F4;
+    border-color: #B4C5E4;
+    color: #B4C5E4;
 }
 
 .btn-outline-secondary:hover {
-    border-color:#7CB4F4;
-    background-color: #7CB4F4;
+    border-color: #B4C5E4;
+    background-color: #B4C5E4;
 }
 
 .section_background-secondary {
-    background-color: #7CB4F4;
+    background-color: #B4C5E4;
 }
 
 @media screen and (max-width: 900px) {
-    h1 {
-        font-size: 34px;
+     :root {
+        font-size: 11px;
     }
-    
-    h2 {
-        font-size: 22px;
+    h1 {
+        font-size: 3rem;
+    }
+    h2,
+    .lead {
+        font-size: 2rem;
         text-align: center;
     }
-    
     h3 {
         font-size: 15px;
     }
-    
-    p, .list-group-item {
+    p,
+    .list-group-item {
         font-size: 12px;
     }
-
     .btn {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+/* Animation */
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    -webkit-animation: slide-in-right 700ms both;
+    animation: slide-in-right 700ms both;
+}
+
+
+/* *************************************** Menu de Navigation *************************************** */
+
+.navbar {
+    position: fixed;
+    display: block;
+    padding: 0;
+    z-index: 2;
+    background-color: #b4c5e4e6;
+    transition: width 200ms ease;
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-540deg);
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
     width: 100%;
 }
-}
-/* Section Hero */
 
-/* Section Soft Skills */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background: white;
+    color: #7f91b1;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    max-width: 2rem;
+    margin: 0 1rem;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+    background: #7f91b1;
+    text-transform: uppercase;
+    /* margin-bottom: 1rem; */
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg {
+    max-width: 2rem;
+    max-height: 2rem;
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed);
+}
+
+
+/* Mobile Navigation */
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+        border-radius: 5px 5px 0 0;
+    }
+    .logo {
+        display: none;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {
+        justify-content: center;
+    }
+    main {
+        margin: 0 auto 0;
+    }
+}
+
+
+/* Tablette Navigation */
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        right: 0;
+        width: 4rem;
+        height: 100vh;
+    }
+    .navbar:hover {
+        width: 12rem;
+    }
+    .navbar:hover .link-text {
+        display: inline;
+        transition: opacity var(--transition-speed);
+    }
+}
+
+
+/* Modification SVG */
+
+.fas {
+    color: #ff7eee;
+}
+
+.fa-secondary {
+    color: #df49a6;
+}
+
+
+/* .fa-primary,
+.fa-secondary {
+    transition: var(--transition-speed);
+} */
+
+
+/* *************************************** Section Hero *************************************** */
+
+.section_hero {
+    position: relative;
+    background-color: #3D52D5;
+}
+
+.contents-hero,
+.contents {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.color-white {
+    color: #FBFFF1;
+}
+
+
+/* Séparation  */
+
+.custom-shape-divider-bottom-1641855067 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1641855067 svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1.3px);
+    height: 28px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1641855067 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/* Portable */
+
+@media screen and (max-width: 900px) {
+    .contents-hero {
+        padding: 1rem 2rem 5rem;
+    }
+}
+
+
+/* *************************************** Section Soft Skills *************************************** */
 
 .icone_skill {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 900px) {
     .icone_skill {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
+    }
+    .contents {
+        padding: 3rem 2rem 5rem;
     }
 }
 
-/* Section Compétences */
+
+/* *************************************** Section Compétences *************************************** */
 
 .icone_langages {
     width: 80px;
@@ -114,17 +381,19 @@ p, .list-group-item {
     }
 }
 
-/* Section Savoir Faire */
+
+/* *************************************** Section Savoir Faire *************************************** */
 
 .list-group-item {
     border: none;
     background: none;
 }
 
-/* Section A Propos */
+
+/* *************************************** Section A Propos *************************************** */
 
 
-/* Section Contact */
+/* *************************************** Section Contact *************************************** */
 
 .contact_form-size {
     width: 75%;
