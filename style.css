@@ -49,6 +49,7 @@ h2,
 .lead {
     font-size: 2.2rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 h3 {
@@ -103,13 +104,14 @@ p,
 
 .section_background-secondary {
     background-color: #B4C5E4;
+    color: white;
 }
 
 @media screen and (max-width: 900px) {
      :root {
         font-size: 11px;
     }
-    h1 {
+    /* h1 {
         font-size: 3rem;
     }
     h2,
@@ -118,12 +120,12 @@ p,
         text-align: center;
     }
     h3 {
-        font-size: 15px;
+        font-size: 1rem;
     }
     p,
     .list-group-item {
         font-size: 12px;
-    }
+    } */
     .btn {
         width: 100%;
     }
@@ -349,14 +351,21 @@ p,
 
 /* *************************************** Section Soft Skills *************************************** */
 
-.icone_skill {
+.section_hero {
+    position: relative;
+    background-color: #3D52D5;
+}
+
+.icone_skill,
+.icone_langages {
     width: 80px;
     height: 80px;
     margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 900px) {
-    .icone_skill {
+    .icone_skill,
+    .icone_langages {
         width: 50px;
         height: 50px;
     }
@@ -368,7 +377,40 @@ p,
 
 /* *************************************** Section Compétences *************************************** */
 
-.icone_langages {
+.section_competence {
+    position: relative;
+    background-color: #B4C5E4;
+    color: white;
+}
+
+.custom-shape-divider-top-1642023908 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1642023908 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 51px;
+}
+
+.custom-shape-divider-top-1642023908 .shape-fill {
+    fill: #FFFFFF;
+}
+
+@media screen and (max-width: 900px) {
+    .custom-shape-divider-top-1642023908 svg {
+        height: 25px;
+    }
+}
+
+
+/* .icone_langages {
     width: 80px;
     height: 80px;
     margin-bottom: 2rem;
@@ -379,18 +421,76 @@ p,
         width: 64px;
         height: 64px;
     }
-}
+} */
 
 
 /* *************************************** Section Savoir Faire *************************************** */
 
-.list-group-item {
-    border: none;
-    background: none;
+.liste {
+    list-style: none;
+}
+
+.liste-item {
+    display: flex;
+    gap: 1rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.img-fluid-height {
+    height: 100%;
+    width: auto;
+}
+
+
+/* *************************************** Section Projet *************************************** */
+
+.carousel-indicators {
+    position: static;
+}
+
+.section-projet {
+    background-color: #B4C5E4;
+    position: relative;
+}
+
+.carousel-slider {
+    overflow: hidden;
+}
+
+.custom-shape-divider-top-1642023900 .shape-fill {
+    fill: #090C9B;
 }
 
 
 /* *************************************** Section A Propos *************************************** */
+
+.section-propos {
+    background-color: #090C9B;
+    position: relative;
+    color: white;
+}
+
+.custom-shape-divider-top-1642032190 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1642032190 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 51px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1642032190 .shape-fill {
+    fill: #B4C5E4;
+}
 
 
 /* *************************************** Section Contact *************************************** */
