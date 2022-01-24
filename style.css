@@ -144,7 +144,7 @@ p,
     }
 }
 
-@-webkit-keyframes slide-in-right {
+/* @-webkit-keyframes slide-in-right {
     0% {
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
@@ -155,12 +155,12 @@ p,
         transform: translateX(0%);
         opacity: 1;
     }
-}
+} */
 
 
 /* Animation */
 
-@keyframes slide-in-right {
+/* @keyframes slide-in-right {
     0% {
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
@@ -176,7 +176,37 @@ p,
 .slide-in-right {
     -webkit-animation: slide-in-right 700ms both;
     animation: slide-in-right 700ms both;
+} */
+
+
+/* .slide-in-menu {
+    width: 0px;
+} */
+
+.slide-in-bottom {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 650ms ease-in-out,
+    opacity 650ms ease-in-out;
 }
+
+.slide-in-bottom.active{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 650ms ease-in-out,
+    opacity 650ms ease-in-out;
+}
+
+.slide-in-left.active {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
 
 
 /* *************************************** Menu de Navigation *************************************** */
@@ -258,6 +288,10 @@ p,
         bottom: 0;
         width: 100vw;
         height: 5rem;
+        transition: height 200ms ease;
+    }
+    .navbar.desactive {
+        height: 0%;
     }
     .logo {
         display: none;
@@ -282,6 +316,9 @@ p,
         right: 0;
         width: 4rem;
         height: 100vh;
+    }
+    .navbar.desactive {
+        width: 0%;
     }
     .navbar:hover {
         width: 12rem;

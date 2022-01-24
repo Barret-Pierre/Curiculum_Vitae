@@ -17,7 +17,7 @@
     <main>
         <!-- ************************* Menu ************************* -->
 
-        <nav class="navbar slide-in-right">
+        <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="logo">
                     <div class="nav-link">
@@ -55,7 +55,7 @@
                         <img id="imgh" src="images/animation_hero.gif" class="d-block mx-lg-auto img-fluid"
                             alt="Animation de développeur" width="700" height="500" loading="lazy">
                     </div>
-                    <div class="col-sm-6 text-sm-start text-center">
+                    <div class="col-sm-6 m-0 text-sm-start text-center slide-in-left load">
                         <h1 class="fw-bold lh-1 mb-3">Développeur web</h1>
                         <p class="lead text-sm-start">Pierre Barret</p>
                         <div class="d-grid gap-3 d-md-flex justify-content-md-start">
@@ -77,7 +77,7 @@
         <section class="section_soft">
             <div class="container contents">
                 <h2 class="bold mt-4">Soft Skill</h2>
-                <div class="row gy-5 justify-content-between">
+                <div class="row gy-5 justify-content-between slide-in-bottom on-scroll">
                     <div class="col-lg-2 col-6 text-center">
                         <lord-icon src="https://cdn.lordicon.com/uukerzzv.json" trigger="hover"
                             colors="primary:#ff6447,secondary:#bceee1" class="icone_skill">
@@ -128,7 +128,7 @@
             <div class="container contents">
                 <h2 class="bold mt-4">A Propos</h2>
                 <div class="row align-items-center g-5">
-                    <div class="col-sm-7 text-sm-start text-center">
+                    <div class="col-sm-7 text-sm-start text-center on-scroll slide-in-left">
                         <div class="container px-0">
                             <p>Passionné de jeux vidéo, de jeux de logique et de jeux de société depuis mon plus jeune
                                 âge, je cultive depuis peu un grand intérêt auprès des métiers de la tech.</p>
@@ -153,7 +153,7 @@
                                 alt="Animation d'une personne qui lit un livre. Cette personne est entourée d'icône scientifique"
                                 width="700" height="500" loading="lazy">
                         </div>
-                        <ul class="liste">
+                        <ul class="liste on-scroll slide-in-left">
                             <li class="liste-item">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -249,7 +249,7 @@
         <section class="section_competence">
             <div class="container contents">
                 <h2 class="bold mt-4">Langages et frameworks</h2>
-                <div class="row gy-5 justify-content-between">
+                <div class="row gy-5 justify-content-between slide-in-bottom on-scroll">
                     <div class="col-lg-2 col-4 text-center">
                         <span class="icone_langages">
                             <i class="fab fa-html5"></i>
@@ -308,7 +308,7 @@
         <section class="section-projet" id="projet">
             <div class="container contents">
                 <h2 class="bold mt-4">Mes projets</h2>
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide slide-in-bottom on-scroll" data-bs-ride="carousel" data-touch="true">
                     <!-- Contenue -->
 
                     <div class="carousel-inner">
@@ -492,6 +492,7 @@
 
     <!-- ************************* Animation Script ************************* -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <!-- ************************* Script Icônes ************************* -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
