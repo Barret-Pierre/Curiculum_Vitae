@@ -3,20 +3,11 @@
 // élements devant s'animer au scroll
 const elementsSlideBottom = document.querySelectorAll(".on-scroll");
 
-// élements devant s'animer au load
-const elementAnimerLoad = document.querySelector(".load");
-
 // éléments pour l'appartition du menu 
 const menuNavigation = document.querySelector(".navbar");
 const sectionSoft = document.querySelector(".section_soft");
 
 // ********************************** Evènements **********************************
-
-// Au chargement
-window.addEventListener('load', function (e) {
-    elementAnimerLoad.classList.add("active");
-})
-
 
 // Au scroll 
 window.addEventListener('scroll', function (e) {

@@ -17,7 +17,7 @@
     <main>
         <!-- ************************* Menu ************************* -->
 
-        <nav class="navbar">
+        <nav class="navbar desactive">
             <ul class="navbar-nav">
                 <li class="logo">
                     <div class="nav-link">
@@ -55,7 +55,7 @@
                         <img id="imgh" src="images/animation_hero.gif" class="d-block mx-lg-auto img-fluid"
                             alt="Animation de développeur" width="700" height="500" loading="lazy">
                     </div>
-                    <div class="col-sm-6 m-0 text-sm-start text-center slide-in-left load">
+                    <div class="col-sm-6 m-0 text-sm-start text-center">
                         <h1 class="fw-bold lh-1 mb-3">Développeur web</h1>
                         <p class="lead text-sm-start">Pierre Barret</p>
                         <div class="d-grid gap-3 d-md-flex justify-content-md-start">
@@ -418,31 +418,31 @@
             <div class="container contents" id="contactForm">
                 <h2 class="bold mt-4">Contact</h2>
                 <div class="contact_form-size container p-0">
-                    <form class="needs-validation">
+                    <form class="needs-validation" action="contact.php" method="post">
                         <div class="row gy-3">
                             <div class="col-12 text-center">
-                                <textarea name="" id="" class="form-control" placeholder="Votre message ici" rows="5"
+                                <textarea name="message" id="" class="form-control" placeholder="Votre message ici" rows="5"
                                     required></textarea>
                             </div>
                             <!-- /.col-12 -->
                             <div class="col-12 col-lg-6 text-center">
-                                <input type="text" class="form-control" placeholder="Nom" required>
+                                <input type="text" name="nom" class="form-control" placeholder="Nom" required>
                             </div>
                             <!-- /.col-12 -->
                             <div class="col-12 col-lg-6 text-center">
-                                <input type="text" class="form-control" placeholder="Prénom" required>
+                                <input type="text" name="prénom" class="form-control" placeholder="Prénom" required>
                             </div>
                             <!-- /.col-12 -->
                             <div class="col-12 text-center">
-                                <input type="email" class="form-control" placeholder="Email" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
                             </div>
                             <!-- /.col-12 -->
                             <div class="col-12 col-lg-6 text-center">
-                                <input type="tel" class="form-control" placeholder="Téléphone" required>
+                                <input type="tel" name="téléphone" class="form-control" placeholder="Téléphone" required>
                             </div>
                             <!-- /.col-12 -->
                             <div class="col-12 col-lg-6 text-center">
-                                <input type="text" class="form-control" placeholder="Société">
+                                <input type="text" name="société" class="form-control" placeholder="Société">
                             </div>
                             <!-- /.col-12 -->
                             <div class="d-grid gap-3 d-md-flex justify-content-md-end">
