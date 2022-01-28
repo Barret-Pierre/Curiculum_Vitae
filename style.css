@@ -66,6 +66,15 @@ p,
     font-size: 1rem;
 }
 
+a {
+    color: #023C3D;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF6447;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -73,6 +82,11 @@ p,
 .btn {
     font-size: 1rem;
     width: 200px;
+}
+
+.btn-s {
+    font-size: 1rem;
+    width: 150px;
 }
 
 .btn-primary {
@@ -592,9 +606,27 @@ p,
     width: 75%;
 } */
 
+.bloc-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 900px) {
     .contact_form-size {
         width: 100%;
+    }
+    .bloc-contact {
+        flex-direction: row;
+        justify-content: center;
+    align-items: center;
+    }
+    .section-contact .icone_skill {
+     margin: 0 1rem 0 0 ;
+    }
+    .btn-s {
+        width: 150px;
     }
 }
 
